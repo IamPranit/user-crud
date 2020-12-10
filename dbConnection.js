@@ -1,11 +1,8 @@
 const mongoose = require("mongoose");
 
-const MONGO_URI =
-  "mongodb+srv://userAdmin:EtKd((*wY^G![<c9c3@users.a8wyj.mongodb.net/Users?retryWrites=true&w=majority";
-
 const dbConnection = async () => {
   try {
-    const conn = await mongoose.connect(MONGO_URI, {
+    const conn = await mongoose.connect("mongodb://localhost:27017/users", {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
